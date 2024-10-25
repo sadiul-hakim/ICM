@@ -1,5 +1,5 @@
 # Use a Maven image to build the application
-FROM maven:3.8.4-openjdk-21 AS build
+FROM maven:3.8.4-openjdk-17 AS build
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package
 
 # Use a lightweight JDK image to run the application
-FROM openjdk:21-jdk-slim
+FROM openjdk:17-jdk-slim
 
 # Expose the application port
 EXPOSE 9090
