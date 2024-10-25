@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    /* Layout and sizing */
+    width: 100%;
+    max-width: 1200px; /* Optional max width for larger screens */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 0 16px; /* Adds horizontal padding for small screens */
+
+    /* Flex settings */
+    display: flex;
+    flex-direction: column; /* Stacks child elements vertically by default */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+
+    /* Optional visual styles */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Media query for responsiveness */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 24px; /* Increases padding on medium screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 0 32px; /* Further padding increase on larger screens */
+    }
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    background: #08859b;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 2px;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 2.5vw + 1rem, 3rem);
+}
+
+/* General Dialog Styles */
+dialog {
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 400px; /* Adjust the width as needed */
+    margin: 0 auto;
+    position: relative; /* Required for z-index to work */
+}
+
+/* Dialog Header */
+dialog p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styles */
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Input and Select Styles */
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+/* Input Focus Effect */
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* Bootstrap primary color or your choice */
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #28a745; /* Green color for Add button */
+    color: white;
+}
+
+/* Close Button */
+button[type="button"] {
+    background-color: #dc3545; /* Red color for Close button */
+    color: white;
+}
+
+/* Button Hover Effects */
+button:hover {
+    opacity: 0.9; /* Slightly dim buttons on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    dialog {
+        width: 90%; /* Make dialog responsive on small screens */
+    }
+}
