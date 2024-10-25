@@ -18,7 +18,7 @@ FROM openjdk:17-jdk-slim
 EXPOSE 9090
 
 # Copy the built JAR file from the build stage to the run stage
-COPY --from=build /app/target/ICM-1.0.0.jar chat.jar
+COPY --from=build /app/target/ICM-1.0.0.jar ICM-1.0.0.jar
 
 # Set the entrypoint to run the JAR file
 ENTRYPOINT ["java", "-jar", "ICM-1.0.0.jar"]
